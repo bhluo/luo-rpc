@@ -6,9 +6,6 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 本地注册中心
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @learn <a href="https://codefather.cn">编程宝典</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 public class LocalRegistry {
 
@@ -20,8 +17,6 @@ public class LocalRegistry {
     /**
      * 注册服务
      *
-     * @param serviceName
-     * @param implClass
      */
     public static void register(String serviceName, Class<?> implClass) {
         map.put(serviceName, implClass);
@@ -30,8 +25,6 @@ public class LocalRegistry {
     /**
      * 获取服务
      *
-     * @param serviceName
-     * @return
      */
     public static Class<?> get(String serviceName) {
         return map.get(serviceName);
@@ -40,7 +33,6 @@ public class LocalRegistry {
     /**
      * 删除服务
      *
-     * @param serviceName
      */
     public static void remove(String serviceName) {
         map.remove(serviceName);
